@@ -1,7 +1,7 @@
 import keras
 import pandas as pd
 
-from lr.plot import make_plots, model_info
+from linear_regression.plot import make_plots, model_info
 
 
 def build_model(my_learning_rate, num_features):

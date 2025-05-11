@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 
-from lr.predict import predict_fare, show_predictions
-from lr.train import run_experiment
+from linear_regression.predict import predict_fare, show_predictions
+from linear_regression.train import run_experiment
 
 pd.options.mode.copy_on_write = True
 
