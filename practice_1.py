@@ -2,7 +2,6 @@ import os
 import pickle
 
 import keras
-import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -68,7 +67,7 @@ def main():
         history = model.fit(
             x_train,
             y_train,
-            epochs=50,
+            epochs=20,
             batch_size=32,
             validation_split=0.1,
         )
@@ -78,46 +77,46 @@ def main():
 
     model.evaluate(x_test, y_test, verbose=2)
 
-    plt.figure(figsize=(12, 5))
-
-    plt.subplot(1, 2, 1)
-    plt.plot(
-        history.epoch,
-        history.history["loss"],
-        label="Loss",
-    )
-    plt.plot(
-        history.epoch,
-        history.history["val_loss"],
-        label="Validation Loss",
-    )
-    plt.title("Loss")
-    plt.xlabel("Epochs")
-    plt.ylabel("Loss")
-    plt.legend()
-    plt.grid(True)
-
-    plt.subplot(1, 2, 2)
-    plt.plot(
-        history.epoch,
-        history.history["accuracy"],
-        label="Accuracy",
-    )
-    plt.plot(
-        history.epoch,
-        history.history["val_accuracy"],
-        label="Validation Accuracy",
-    )
-    plt.title("Accuracy")
-    plt.xlabel("Epochs")
-    plt.ylabel("Accuracy")
-    plt.legend()
-    plt.grid(True)
-
-    plt.tight_layout()
-    plt.show()
-
-    plt.plot()
+    # plt.figure(figsize=(12, 5))
+    #
+    # plt.subplot(1, 2, 1)
+    # plt.plot(
+    #     history.epoch,
+    #     history.history["loss"],
+    #     label="Loss",
+    # )
+    # plt.plot(
+    #     history.epoch,
+    #     history.history["val_loss"],
+    #     label="Validation Loss",
+    # )
+    # plt.title("Loss")
+    # plt.xlabel("Epochs")
+    # plt.ylabel("Loss")
+    # plt.legend()
+    # plt.grid(True)
+    #
+    # plt.subplot(1, 2, 2)
+    # plt.plot(
+    #     history.epoch,
+    #     history.history["accuracy"],
+    #     label="Accuracy",
+    # )
+    # plt.plot(
+    #     history.epoch,
+    #     history.history["val_accuracy"],
+    #     label="Validation Accuracy",
+    # )
+    # plt.title("Accuracy")
+    # plt.xlabel("Epochs")
+    # plt.ylabel("Accuracy")
+    # plt.legend()
+    # plt.grid(True)
+    #
+    # plt.tight_layout()
+    # plt.show()
+    #
+    # plt.plot()
 
 
 if __name__ == "__main__":
